@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+	<b>Position:</b>
+	<%= @move.position %>
+</p>
+
+<p>
+	<b>Letter:</b>
+	<%= @move.letter %>
+</p>
+
+<%= link_to 'Edit', edit_move_path(@move) %> |
+<%= link_to 'Back', moves_path %>

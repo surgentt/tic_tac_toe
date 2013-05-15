@@ -1,0 +1,100 @@
+<h1>Tic-Tac-Toe</h1>
+
+<table id="board">
+  <tbody>
+    <tr>
+      <td>1
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 1 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>2
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 2 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>3
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 3 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>4
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 4 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>5
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 5 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>6
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 6 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+    <tr> 
+      <td>7
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 7 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>8
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 8 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+      <td>9
+        <% @moves.each do |move| %>
+          <% if move.position.to_i == 9 %>
+            <%= move.letter %>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br />
+
+<b>Make your Move!!</b> 
+
+<%= render 'form' %>
+
+<h3>Game History:</h3>
+<table>
+<tr>
+  <th>Position</th>
+  <th>Letter</th>
+</tr>
+
+<% @moves.each do |move| %>
+  <tr>
+    <td><%= move.position %></td>
+    <td><%= move.letter %></td>
+    <td><%= link_to 'Show', move %></td>
+    <td><%= link_to 'Edit', edit_move_path(move) %></td>
+    <td><%= link_to 'Destroy', move, method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+

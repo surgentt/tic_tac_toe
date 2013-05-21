@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
-  <div>
-    <%= f.label :position %>
-    <%= f.select :position, ['1', '2', '3', '4', '5', '6', '7', '8', '9'] %>
-  </div>
+  <b>Please select your Letter:</b>
 
   <div>
     <%= f.label :letter %>
     <%= f.select :letter, ['X', 'O'] %>
   </diV>
+
+  <b>Make your Move!!</b> 
+
+  <div>
+    <%= f.label :position %>
+    <%= f.select :position, ['1', '2', '3', '4', '5', '6', '7', '8', '9'] %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Place Move" %>

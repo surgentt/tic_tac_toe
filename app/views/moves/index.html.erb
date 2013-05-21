@@ -76,8 +76,6 @@
 
 <br />
 
-<b>Make your Move!!</b> 
-
 <%= render 'form' %>
 
 <h3>Game History:</h3>
@@ -91,10 +89,11 @@
   <tr>
     <td><%= move.position %></td>
     <td><%= move.letter %></td>
-    <td><%= link_to 'Show', move %></td>
-    <td><%= link_to 'Edit', edit_move_path(move) %></td>
     <td><%= link_to 'Destroy', move, method: :delete %></td>
   </tr>
 <% end %>
+
 </table>
+
+
 
